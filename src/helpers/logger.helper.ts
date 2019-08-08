@@ -7,13 +7,11 @@ const loggerMiddleware = (req: Request, res: Response, next: NextFunction): void
 
 const handlerResponse = (res, codeError, output, validate = true): void => {
     const responseObject = {
-        response: [
-            {
-                systemMessage: output.message,
-                requestValidate: validate,
-                statusCode: codeError,
-            },
-        ],
+        response: {
+            systemMessage: output.message,
+            requestValidate: validate,
+            statusCode: codeError,
+        },
     };
 
     return res.status(codeError).send(responseObject);
