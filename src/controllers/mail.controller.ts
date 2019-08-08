@@ -29,7 +29,7 @@ class MailController {
                 to: email,
                 subject: 'Prueba de la landing',
                 html: `Muchas gracias por ponerse en contacto con nosotros, Saludos.`,
-            }, (err, body) => {
+            }, err => {
                 if (err) { return handlerResponse(res, 500, {
                     message: 'Ocurrio un error al enviarle el correo de confirmacion, nos pondremos en contacto contigo a la brevedad.',
                 }); }
