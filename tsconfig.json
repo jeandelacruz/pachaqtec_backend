@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "reflect-metadata"
+    ],
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "incremental": true,
+    "paths": {
+      "@config/*": ["config/*"],
+      "@helpers/*": ["helpers/*"],
+      "@routes/*": ["routes/*"],
+      "@controllers/*": ["controllers/*"],
+      "@entity/*": ["entity/*"],
+      "@validation/*": ["routes/validation/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/**/*.ts",
+    "docs/**/*.ts",
+    "test/*",
+    ".env",
+    ".env_development"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
